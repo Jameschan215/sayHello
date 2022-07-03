@@ -49,7 +49,7 @@
     </div>
 
 <!--    DATA-->
-    <div class="list-group ">
+    <div class="list-group">
         {% for message in messages %}
         <a class="list-group-item list-group-item-action flex-column">
             <div class="d-flex w-100 justify-content-between">
@@ -57,7 +57,7 @@
                     {{ message.name }}
                     <small class="text-muted"># {{ message.id }}</small>
                 </h5>
-                <small>{{ message.timestamp }}</small>
+                <small>{{ moment(message.timestamp).fromNow() }}</small>
             </div>
             <p class="mb-1">{{ message.message }}</p>
         </a>
