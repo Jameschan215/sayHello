@@ -1,0 +1,2 @@
+FLASK_APP=sayHello.py
+FLASK_ENV=development
