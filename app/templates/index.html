@@ -43,4 +43,24 @@
         </div>
     </form>
 
+
+    <div class="mb-4 mt-5">
+        TOTAL MESSAGES: {{ messages | length }}
+    </div>
+
+<!--    DATA-->
+    <div class="list-group ">
+        {% for message in messages %}
+        <a class="list-group-item list-group-item-action flex-column">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1 text-success">
+                    {{ message.name }}
+                    <small class="text-muted"># {{ message.id }}</small>
+                </h5>
+                <small>{{ message.timestamp }}</small>
+            </div>
+            <p class="mb-1">{{ message.message }}</p>
+        </a>
+        {% endfor %}
+    </div>
 {% endblock %}
